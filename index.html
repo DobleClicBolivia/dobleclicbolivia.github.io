@@ -4,17 +4,13 @@
 		<title>Doble Clic Bolivia - Soporte Técnico</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!-- Security fix for GitHub Pages -->
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 		
-		<!-- Embedded custom CSS styling to match the mock-up and integrate the banner -->
 		<style>
-			/* Color Palette & Base Styles */
 			:root {
 				--bg-dark: #2c2d2f;
 				--accent-orange: #e06c2b;
 				--card-white: #ffffff;
-				--text-light: #ffffff;
 				--text-dark: #1d1e20;
 				--text-muted: #737373;
 			}
@@ -28,35 +24,31 @@
 			body {
 				background-color: var(--bg-dark);
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				color: var(--text-light);
+				color: #ffffff;
 				line-height: 1.6;
 			}
 
-			/* Container */
 			.wrapper {
 				max-width: 900px;
 				margin: 0 auto;
 				padding: 20px;
 			}
 
-			/* New Banner Header Styles */
-			header.banner-header {
+			/* Estilo para el logo cuadrado a la izquierda */
+			header.logo-header {
 				width: 100%;
 				padding: 20px 0;
 				display: flex;
-				justify-content: center;
+				justify-content: flex-start;
 				align-items: center;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 			}
 
-			.banner-header img {
-				max-width: 100%; /* Responsive banner that fits the container */
+			header.logo-header img {
+				max-width: 150px;
 				height: auto;
-				border-radius: 12px; /* Subtle rounded corners for the banner */
-				box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+				border-radius: 12px;
 			}
 
-			/* Navigation Bar */
 			nav.navbar {
 				background-color: var(--accent-orange);
 				border-radius: 8px;
@@ -74,7 +66,7 @@
 			}
 
 			nav.navbar a {
-				color: var(--text-light);
+				color: #ffffff;
 				text-decoration: none;
 				font-weight: 600;
 				font-size: 0.95rem;
@@ -84,7 +76,6 @@
 				text-decoration: underline;
 			}
 
-			/* Featured Post Block */
 			.featured-post {
 				background-color: var(--card-white);
 				color: var(--text-dark);
@@ -108,10 +99,9 @@
 				max-width: 80%;
 			}
 
-			/* Buttons */
 			.btn {
 				background-color: var(--text-dark);
-				color: var(--text-light);
+				color: #ffffff;
 				padding: 12px 30px;
 				border-radius: 8px;
 				text-decoration: none;
@@ -124,7 +114,6 @@
 				background-color: var(--accent-orange);
 			}
 
-			/* Grid Section */
 			.services-grid {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -168,7 +157,6 @@
 				line-height: 1.5;
 			}
 
-			/* Footer styling */
 			footer {
 				text-align: center;
 				padding: 40px 0;
@@ -182,7 +170,6 @@
 				text-decoration: none;
 			}
 
-			/* Responsive Design adaptation */
 			@media (max-width: 768px) {
 				nav.navbar {
 					flex-direction: column;
@@ -195,13 +182,12 @@
 
 		<div class="wrapper">
 
-			<!-- New Banner Header Section (Uses Presentation1.png) -->
-			<header class="banner-header">
-				<!-- Make sure to upload "Presentation1.png" to your GitHub files -->
-				<img src="Presentation1.png" alt="Doble Clic Bolivia Banner">
+			<!-- Logo Cabecera (Apunta a logo-cuadrado.png) -->
+			<header class="logo-header">
+				<img src="logo-cuadrado.png" alt="Logo Doble Clic">
 			</header>
 
-			<!-- Navigation Bar -->
+			<!-- Navegación -->
 			<nav class="navbar">
 				<ul>
 					<li><a href="#inicio">Inicio</a></li>
@@ -209,45 +195,37 @@
 					<li><a href="#contacto">Contacto</a></li>
 				</ul>
 				<ul>
-					<!-- Replace "#" with your actual social links -->
 					<li><a href="#" target="_blank">Facebook</a></li>
 					<li><a href="#" target="_blank">Instagram</a></li>
 					<li><a href="mailto:dobleclicbolivia@outlook.com">Correo</a></li>
 				</ul>
 			</nav>
 
-			<!-- Main Container -->
+			<!-- Contenido -->
 			<main>
-
-				<!-- Featured Post (Reparación Computadoras) -->
 				<section class="featured-post" id="inicio">
 					<h2>Reparación y Soporte de Computadoras</h2>
 					<p>Nos encargamos de que tus equipos funcionen al 100%. Diagnosticamos, reparamos y optimizamos tus computadoras, laptops y dispositivos de manera confiable.</p>
 					<a href="mailto:dobleclicbolivia@outlook.com" class="btn">Comenzar</a>
 				</section>
 
-				<!-- Services Grid -->
 				<section class="services-grid" id="servicios">
-					
-					<!-- Card 1 -->
 					<article class="service-card">
-						<img src="images/pic02.jpg" alt="Reparación técnica" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Hardware'">
+						<img src="images/pic02.jpg" alt="Hardware" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Hardware'">
 						<div class="service-card-content">
 							<h3>Reparación técnica de computadoras</h3>
 							<p>Solución profesional a fallas físicas de hardware, cambio de pantallas rotas, reparación de teclados y componentes internos.</p>
 						</div>
 					</article>
 
-					<!-- Card 2 -->
 					<article class="service-card">
-						<img src="images/pic03.jpg" alt="Mantenimiento preventivo" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Mantenimiento'">
+						<img src="images/pic03.jpg" alt="Mantenimiento" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Mantenimiento'">
 						<div class="service-card-content">
 							<h3>Mantenimiento preventivo y limpieza</h3>
 							<p>Limpieza profunda de componentes, optimización de ventilación y cambio de pasta térmica de alta gama para evitar sobrecalentamientos.</p>
 						</div>
 					</article>
 
-					<!-- Card 3 -->
 					<article class="service-card">
 						<img src="images/pic04.jpg" alt="Actualizaciones" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Actualización'">
 						<div class="service-card-content">
@@ -256,7 +234,6 @@
 						</div>
 					</article>
 
-					<!-- Card 4 -->
 					<article class="service-card">
 						<img src="images/pic05.jpg" alt="Software" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Software'">
 						<div class="service-card-content">
@@ -264,13 +241,10 @@
 							<p>Formateo completo, reinstalación de sistemas operativos, configuración de antivirus, programas de oficina y herramientas profesionales.</p>
 						</div>
 					</article>
-
 				</section>
-
 			</main>
 
-			<!-- Footer -->
-			<footer id="contacto">
+			<footer>
 				<p>&copy; 2026 Doble Clic Bolivia. Todos los derechos reservados.</p>
 				<p>Contacto: <a href="mailto:dobleclicbolivia@outlook.com">dobleclicbolivia@outlook.com</a></p>
 			</footer>
