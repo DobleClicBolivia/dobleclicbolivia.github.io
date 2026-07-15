@@ -1,228 +1,310 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="es">
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Doble Clic Bolivia - Soporte Técnico</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Security fix for GitHub Pages -->
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		
+		<!-- Embedded custom CSS styling to match the mock-up exactly -->
+		<style>
+			/* Color Palette & Base Styles */
+			:root {
+				--bg-dark: #2c2d2f;
+				--accent-orange: #e06c2b;
+				--card-white: #ffffff;
+				--text-light: #ffffff;
+				--text-dark: #1d1e20;
+				--text-muted: #737373;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background-color: var(--bg-dark);
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				color: var(--text-light);
+				line-height: 1.6;
+			}
+
+			/* Container */
+			.wrapper {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 20px;
+			}
+
+			/* Header & Hero Section */
+			header.hero {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 40px 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.hero-text {
+				max-width: 50%;
+			}
+
+			.hero-text h1 {
+				font-size: 3rem;
+				font-weight: 800;
+				line-height: 1.1;
+				text-transform: lowercase;
+				margin-bottom: 15px;
+			}
+
+			.hero-text p {
+				font-size: 1.1rem;
+				color: #cccccc;
+			}
+
+			.hero-logo img {
+				max-width: 280px;
+				border-radius: 24px;
+				box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+			}
+
+			/* Navigation Bar */
+			nav.navbar {
+				background-color: var(--accent-orange);
+				border-radius: 8px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 12px 24px;
+				margin: 20px 0 40px 0;
+			}
+
+			nav.navbar ul {
+				display: flex;
+				list-style: none;
+				gap: 20px;
+			}
+
+			nav.navbar a {
+				color: var(--text-light);
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 0.95rem;
+			}
+
+			nav.navbar a:hover {
+				text-decoration: underline;
+			}
+
+			/* Featured Post Block */
+			.featured-post {
+				background-color: var(--card-white);
+				color: var(--text-dark);
+				border-radius: 20px;
+				padding: 40px;
+				margin-bottom: 40px;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+			}
+
+			.featured-post h2 {
+				font-size: 2.2rem;
+				font-weight: 800;
+				line-height: 1.2;
+				margin-bottom: 15px;
+			}
+
+			.featured-post p {
+				color: var(--text-muted);
+				font-size: 1.1rem;
+				margin-bottom: 25px;
+				max-width: 80%;
+			}
+
+			/* Buttons */
+			.btn {
+				background-color: var(--text-dark);
+				color: var(--text-light);
+				padding: 12px 30px;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: bold;
+				display: inline-block;
+				transition: background 0.3s ease;
+			}
+
+			.btn:hover {
+				background-color: var(--accent-orange);
+			}
+
+			/* Grid Section */
+			.services-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 30px;
+				margin-bottom: 60px;
+			}
+
+			.service-card {
+				background-color: var(--card-white);
+				color: var(--text-dark);
+				border-radius: 16px;
+				overflow: hidden;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+				display: flex;
+				flex-direction: column;
+			}
+
+			.service-card img {
+				width: 100%;
+				height: 180px;
+				object-fit: cover;
+			}
+
+			.service-card-content {
+				padding: 24px;
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+			}
+
+			.service-card h3 {
+				font-size: 1.3rem;
+				font-weight: 700;
+				margin-bottom: 10px;
+				line-height: 1.3;
+			}
+
+			.service-card p {
+				font-size: 0.95rem;
+				color: var(--text-muted);
+				line-height: 1.5;
+			}
+
+			/* Footer styling */
+			footer {
+				text-align: center;
+				padding: 40px 0;
+				color: #888888;
+				font-size: 0.9rem;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			footer a {
+				color: var(--accent-orange);
+				text-decoration: none;
+			}
+
+			/* Responsive Design adaptation */
+			@media (max-width: 768px) {
+				header.hero {
+					flex-direction: column-reverse;
+					text-align: center;
+					gap: 30px;
+				}
+				.hero-text {
+					max-width: 100%;
+				}
+				nav.navbar {
+					flex-direction: column;
+					gap: 15px;
+				}
+			}
+		</style>
 	</head>
-	<body class="is-preload">
+	<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div class="wrapper">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>doble<br />
-						clic</h1>
-						<p>Soluciones inteligentes para reparacion, mantenimiento, actualizaciones y asistencia tecnica.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+			<!-- Header & Hero Section -->
+			<header class="hero">
+				<div class="hero-text">
+					<h1>doble<br />clic</h1>
+					<p>Soluciones inteligentes para reparación, mantenimiento, actualizaciones y asistencia técnica.</p>
+				</div>
+				<div class="hero-logo">
+					<!-- Make sure to upload "Logo Doble Clic.png" to your GitHub files -->
+					<img src="Logo Doble Clic.png" alt="Logo Doble Clic" onerror="this.src='https://via.placeholder.com/280/e06c2b/ffffff?text=Doble+Clic+Bolivia'">
+				</div>
+			</header>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
-					</header>
+			<!-- Navigation Bar -->
+			<nav class="navbar">
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<li><a href="#servicios">Servicios</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+				<ul>
+					<!-- Replace "#" with your actual social links -->
+					<li><a href="#" target="_blank">Facebook</a></li>
+					<li><a href="#" target="_blank">Instagram</a></li>
+					<li><a href="mailto:dobleclicbolivia@outlook.com">Correo</a></li>
+				</ul>
+			</nav>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+			<!-- Main Container -->
+			<main>
 
-				<!-- Main -->
-					<div id="main">
+				<!-- Featured Post (Reparación Computadoras) -->
+				<section class="featured-post" id="inicio">
+					<h2>Reparación y Soporte de Computadoras</h2>
+					<p>Nos encargamos de que tus equipos funcionen al 100%. Diagnosticamos, reparamos y optimizamos tus computadoras, laptops y dispositivos de manera confiable.</p>
+					<a href="mailto:dobleclicbolivia@outlook.com" class="btn">Comenzar</a>
+				</section>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h2><a href="#">And this is a<br />
-									massive headline</a></h2>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Full Story</a></li>
-								</ul>
-							</article>
+				<!-- Services Grid -->
+				<section class="services-grid" id="servicios">
+					
+					<!-- Card 1 -->
+					<article class="service-card">
+						<img src="images/pic02.jpg" alt="Reparación técnica" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Hardware'">
+						<div class="service-card-content">
+							<h3>Reparación técnica de computadoras</h3>
+							<p>Solución profesional a fallas físicas de hardware, cambio de pantallas rotas, reparación de teclados y componentes internos.</p>
+						</div>
+					</article>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">April 24, 2017</span>
-										<h2><a href="#">Sed magna<br />
-										ipsum faucibus</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
+					<!-- Card 2 -->
+					<article class="service-card">
+						<img src="images/pic03.jpg" alt="Mantenimiento preventivo" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Mantenimiento'">
+						<div class="service-card-content">
+							<h3>Mantenimiento preventivo y limpieza</h3>
+							<p>Limpieza profunda de componentes, optimización de ventilación y cambio de pasta térmica de alta gama para evitar sobrecalentamientos.</p>
+						</div>
+					</article>
 
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
+					<!-- Card 3 -->
+					<article class="service-card">
+						<img src="images/pic04.jpg" alt="Actualizaciones" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Actualización'">
+						<div class="service-card-content">
+							<h3>Actualizaciones de alto rendimiento</h3>
+							<p>Aceleramos de forma exponencial tu equipo lento instalando discos de estado sólido (SSD) y expansión de memoria RAM.</p>
+						</div>
+					</article>
 
-					</div>
+					<!-- Card 4 -->
+					<article class="service-card">
+						<img src="images/pic05.jpg" alt="Software" onerror="this.src='https://via.placeholder.com/400x250/dddddd/333333?text=Software'">
+						<div class="service-card-content">
+							<h3>Instalación y soporte de software</h3>
+							<p>Formateo completo, reinstalación de sistemas operativos, configuración de antivirus, programas de oficina y herramientas profesionales.</p>
+						</div>
+					</article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+				</section>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+			</main>
 
-			</div>
+			<!-- Footer -->
+			<footer id="contacto">
+				<p>&copy; 2026 Doble Clic Bolivia. Todos los derechos reservados.</p>
+				<p>Contacto: <a href="mailto:dobleclicbolivia@outlook.com">dobleclicbolivia@outlook.com</a></p>
+			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		</div>
 
 	</body>
 </html>
