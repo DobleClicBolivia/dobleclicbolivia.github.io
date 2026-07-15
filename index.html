@@ -7,7 +7,7 @@
 		<!-- Security fix for GitHub Pages -->
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 		
-		<!-- Embedded custom CSS styling to match the mock-up exactly -->
+		<!-- Embedded custom CSS styling to match the mock-up and integrate the banner -->
 		<style>
 			/* Color Palette & Base Styles */
 			:root {
@@ -39,35 +39,20 @@
 				padding: 20px;
 			}
 
-			/* Header & Hero Section */
-			header.hero {
+			/* New Banner Header Styles */
+			header.banner-header {
+				width: 100%;
+				padding: 20px 0;
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
 				align-items: center;
-				padding: 40px 0;
 				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 			}
 
-			.hero-text {
-				max-width: 50%;
-			}
-
-			.hero-text h1 {
-				font-size: 3rem;
-				font-weight: 800;
-				line-height: 1.1;
-				text-transform: lowercase;
-				margin-bottom: 15px;
-			}
-
-			.hero-text p {
-				font-size: 1.1rem;
-				color: #cccccc;
-			}
-
-			.hero-logo img {
-				max-width: 280px;
-				border-radius: 24px;
+			.banner-header img {
+				max-width: 100%; /* Responsive banner that fits the container */
+				height: auto;
+				border-radius: 12px; /* Subtle rounded corners for the banner */
 				box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 			}
 
@@ -199,14 +184,6 @@
 
 			/* Responsive Design adaptation */
 			@media (max-width: 768px) {
-				header.hero {
-					flex-direction: column-reverse;
-					text-align: center;
-					gap: 30px;
-				}
-				.hero-text {
-					max-width: 100%;
-				}
 				nav.navbar {
 					flex-direction: column;
 					gap: 15px;
@@ -218,16 +195,10 @@
 
 		<div class="wrapper">
 
-			<!-- Header & Hero Section -->
-			<header class="hero">
-				<div class="hero-text">
-					<h1>doble<br />clic</h1>
-					<p>Soluciones inteligentes para reparación, mantenimiento, actualizaciones y asistencia técnica.</p>
-				</div>
-				<div class="hero-logo">
-					<!-- Make sure to upload "Logo Doble Clic.png" to your GitHub files -->
-					<img src="Logo Doble Clic.png" alt="Logo Doble Clic" onerror="this.src='https://via.placeholder.com/280/e06c2b/ffffff?text=Doble+Clic+Bolivia'">
-				</div>
+			<!-- New Banner Header Section (Uses Presentation1.png) -->
+			<header class="banner-header">
+				<!-- Make sure to upload "Presentation1.png" to your GitHub files -->
+				<img src="Presentation1.png" alt="Doble Clic Bolivia Banner">
 			</header>
 
 			<!-- Navigation Bar -->
