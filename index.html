@@ -118,7 +118,7 @@
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 				gap: 30px;
-				margin-bottom: 60px;
+				margin-bottom: 40px;
 			}
 
 			.service-card {
@@ -154,6 +154,50 @@
 			.service-card p {
 				font-size: 0.95rem;
 				color: var(--text-muted);
+				line-height: 1.5;
+				margin-bottom: 20px;
+			}
+
+			.service-card .btn-sm {
+				background-color: var(--text-dark);
+				color: #ffffff;
+				padding: 8px 16px;
+				border-radius: 6px;
+				text-decoration: none;
+				font-size: 0.85rem;
+				font-weight: bold;
+				display: inline-block;
+				margin-top: auto;
+				text-align: center;
+				transition: background 0.3s ease;
+			}
+
+			.service-card .btn-sm:hover {
+				background-color: var(--accent-orange);
+			}
+
+			/* Sección del Consejo Semanal */
+			.tip-section {
+				background-color: rgba(224, 108, 43, 0.1);
+				border-left: 5px solid var(--accent-orange);
+				border-radius: 12px;
+				padding: 25px;
+				margin-bottom: 60px;
+			}
+
+			.tip-header {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				color: var(--accent-orange);
+				font-size: 1.2rem;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.tip-content p {
+				color: #e0e0e0;
+				font-size: 1rem;
 				line-height: 1.5;
 			}
 
@@ -223,6 +267,7 @@
 						<div class="service-card-content">
 							<h3>Reparación técnica de computadoras</h3>
 							<p>Solución profesional a fallas físicas de hardware, cambio de pantallas rotas, reparación de teclados y componentes internos.</p>
+							<a href="https://wa.me/59172006794?text=Hola%20Doble%20Clic!%20Necesito%20una%20revisión%20técnica%20para%20mi%20equipo.%20Creo%20que%20tiene%20una%20falla%20física%20y%20me%20gustaría%20cotizar%20el%20cambio%20o%20reparación%20de%20un%20componente." target="_blank" class="btn-sm">Agendar Reparación</a>
 						</div>
 					</article>
 
@@ -231,6 +276,7 @@
 						<div class="service-card-content">
 							<h3>Mantenimiento preventivo y limpieza</h3>
 							<p>Limpieza profunda de componentes, optimización de ventilación y cambio de pasta térmica de alta gama para evitar sobrecalentamientos.</p>
+							<a href="https://wa.me/59172006794?text=Hola%20Doble%20Clic!%20Quisiera%20agendar%20un%20mantenimiento%20preventivo%20y%20limpieza%20profunda%20para%20mi%20computadora%20para%20evitar%20que%20se%20sobrecaliente." target="_blank" class="btn-sm">Solicitar Mantenimiento</a>
 						</div>
 					</article>
 
@@ -239,6 +285,7 @@
 						<div class="service-card-content">
 							<h3>Actualizaciones de alto rendimiento</h3>
 							<p>Aceleramos de forma exponencial tu equipo lento instalando discos de estado sólido (SSD) y expansión de memoria RAM.</p>
+							<a href="https://wa.me/59172006794?text=Hola%20Doble%20Clic!%20Mi%20computadora%20está%20muy%20lenta.%20Quisiera%20cotizar%20una%20actualización%20de%20rendimiento%20con%20disco%20sólido%20(SSD)%20o%20memoria%20RAM." target="_blank" class="btn-sm">Acelerar mi Equipo</a>
 						</div>
 					</article>
 
@@ -247,8 +294,19 @@
 						<div class="service-card-content">
 							<h3>Soporte técnico remoto e inmediato</h3>
 							<p>Solucionamos tus problemas de software en línea y en tiempo real. Diagnóstico, optimización, instalación de programas y seguridad virtual sin moverte de casa.</p>
+							<a href="https://wa.me/59172006794?text=Hola%20Doble%20Clic!%20Quisiera%20agendar%20una%20visita%20técnica%20virtual%20para%20solucionar%20un%20problema%20de%20software%20en%20mi%20equipo." target="_blank" class="btn-sm">Agendar Cita Virtual</a>
 						</div>
 					</article>
+				</section>
+
+				<!-- Sección: CONSEJO DOBLE CLIC -->
+				<section class="tip-section">
+					<div class="tip-header">
+						<span>💡</span> CONSEJO DOBLE CLIC
+					</div>
+					<div class="tip-content">
+						<p>¿Tu computadora se congeló repentinamente? Antes de mantener presionado el botón de apagado físico y arriesgarte a perder tus archivos, presiona la combinación de teclas <strong>Ctrl + Shift + Esc</strong>. Esto abrirá directamente el Administrador de Tareas para que puedas cerrar únicamente el programa que no responde. ¡Salva tu trabajo a tiempo!</p>
+					</div>
 				</section>
 			</main>
 
